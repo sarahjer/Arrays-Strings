@@ -2,16 +2,15 @@ function isUnique (str) {
 	if (str.length > 128) {
 		return false;
 	} 
-	var charSet = [];
+	var obj = {};
 	for(var i = 0; i < str.length; i++) {
-		var val = str.charAt(i);
-		for(var j = 0; j < charSet.length; j++) {
-			if(charSet[j] == val) {
+		var val = str[i];
+			if(obj[val]) {
 				return false;
-			} 
-		}	
-		charSet.push(val);
-	}
-console.log("true");
-return charSet;
+			} else {
+				obj[val] = true;
+			}
+	}	
+	return true;
 }
+
