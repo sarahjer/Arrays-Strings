@@ -14,8 +14,9 @@ function isPerm(a, b) {
 		}
 		console.log(x);
 		for(var k = 0; k < x.length; k++) {
-			if(x[k] !== 0);
-			return false;
+			if(x[k] !== 0){
+				return false;
+			}	
 		}
 		return true;
 	}
