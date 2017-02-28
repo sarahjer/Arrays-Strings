@@ -1,3 +1,5 @@
+// Checks if a string is a Permutation of a Palindrome
+
 function isPalin(str){
 	var x = {}, palSum = 0;
 	for(var i = 0; i < str.length; i++){
