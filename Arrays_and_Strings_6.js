@@ -1,3 +1,6 @@
+// compresses a string using counts of repeated characters
+// returns the smaller string(compressed/original) 
+
 function strCompress(str) {
 	var count = 0;
 	var compressedStr = "";
