@@ -1,3 +1,5 @@
+// rotates a matrix by 90 degrees
+
 function rotate(mat){
 	if(mat.length == 0 || mat.length != mat[0].length){
 		console.log(mat[0][1]);
