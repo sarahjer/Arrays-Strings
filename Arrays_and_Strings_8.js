@@ -1,8 +1,9 @@
+//  checks if a MxN matrix has any zero elements
+// if so all the elements of its row and column are set to zero;
+
 function zeroMat(mat){
 	var row = [],
 		column = [];
-		console.log(row);
-		console.log(column);
 	for(var i = 0; i < mat.length; i++){
 		for(var j = 0; j < mat[0].length; j++){
 			if(mat[i][j] == 0){
