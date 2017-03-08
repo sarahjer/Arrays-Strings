@@ -10,30 +10,26 @@ function strRotate(str1, str2){
 	return false;
 }
 function isSubstring(stra, strb){
-	// var string = stra,
-	// 	substring = strb;
-	// return string.includes(substring);
 	var a = false;
-	var i = 0;
-	while(i < stra.length){
-		if(strb.charAt(0) == stra.charAt(i)){
-			a = true;
-			var b = i;
-			break;
+	var i = 0, j = 0;
+	// console.log(strb.length);
+	// console.log(stra.length);
+	while(i < stra.length && j < strb.length){
+		if(strb.charAt(j) != stra.charAt(i)){
+			i++;
+			a = false;
+			j = 0;
 		} else {
 			i++;
+			j++;
+			a = true;
 		}
 	}
-	if(!a){
-		return false;
+	var b;
+	if(a){
+		j == strb.length  ?  b = true : b = false;
+		return b;
 	} else {
-		for(var j = 0; j < strb.length; j++){
-			if(strb.charAt(j) == stra.charAt(b)){
-				b++;
-			} else {
-				return false;
-			}
-		}
-		return true;
+		return false;
 	}
 }
